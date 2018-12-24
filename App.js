@@ -5,11 +5,9 @@
 import React, {Component} from 'react';
 import {
   Platform,
-  ScrollView,
   StyleSheet,
   Text,
   View,
-  Animated,
   SafeAreaView,
 } from 'react-native';
 
@@ -20,56 +18,34 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   constructor(props) {
     super(props);
-    this._animatedValue = new Animated.Value(0);
   }
 
-  /*componentDidMount() {*/
-  //Animated.timing(this._animatedValue, {
-  //toValue: 1,
-  //duration: 1500,
-  //}).start();
-  /*}*/
-
-  render() {
-    const interpolateHeight = this._animatedValue.interpolate({
-      inputRange: [0, 1500],
-      outputRange: [150, 50],
-    });
+    render() {
+    
     return (
       <SafeAreaView style={styles.container}>
-        <Animated.View
+        <View
           style={{
             width: 200,
             marginBottom: 40,
-            height: interpolateHeight,
+            height: 100,
             backgroundColor: 'green',
           }}>
           <Text> some text </Text>
-        </Animated.View>
-        <ScrollView
+        </View>
+        <View
           style={{width: '100%'}}
-          onScroll={Animated.event(
-            [
-              {
-                nativeEvent: {
-                  contentOffset: {y: this._animatedValue},
-                },
-              },
-            ],
-            //{useNativeDriver: true}, // <-- Add this
-          )}
           scrollEventThrottle={1}>
           <Text style={styles.welcome}>Welcome to React Native!</Text>
           <Text style={styles.instructions}>To get started, edit App.js</Text>
           <View
-            style={{height: 1500, width: '100%', backgroundColor: 'blue'}}
+            style={{height: 150, width: '100%', backgroundColor: 'blue'}}
           />
           <Text style={styles.instructions}>{instructions}</Text>
-        </ScrollView>
+        </View>
       </SafeAreaView>
     );
   }
