@@ -3,17 +3,9 @@
  */
 
 import React, {Component} from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  Button,
-} from 'react-native';
+import {SafeAreaView} from 'react-native';
 
-//import MapView from './src/nativeMap';
-import Stepper from './src/nativeStepper';
+import Map from './src/nativeMap';
 
 export default class App extends Component {
   constructor(props) {
@@ -23,7 +15,7 @@ export default class App extends Component {
   render() {
     return (
       <SafeAreaView style={{flex: 1, backgroundColor: 'grey'}}>
-        <Stepper />
+        <Map />
       </SafeAreaView>
     );
   }
