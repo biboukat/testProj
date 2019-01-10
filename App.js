@@ -1,22 +1,10 @@
-/**
- * @flow
- */
-
+/* @flow */
 import React, {Component} from 'react';
-import {SafeAreaView} from 'react-native';
 
-import Map from './src/nativeMap';
+import RootNavigation from './src/navigation';
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    return (
-      <SafeAreaView style={{flex: 1, backgroundColor: 'grey'}}>
-        <Map />
-      </SafeAreaView>
-    );
+    return <RootNavigation />;
   }
 }

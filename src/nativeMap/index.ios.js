@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {View, Button} from 'react-native';
+import {View, Button, SafeAreaView} from 'react-native';
 
 import Map from './mapView.js';
 
-export default class App extends Component {
+export default class MapScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,7 +27,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <View style={{flex: 1}}>
+      <SafeAreaView style={{flex: 1}}>
         <View
           style={{
             width: '100%',
@@ -47,7 +47,7 @@ export default class App extends Component {
           zoomEnabled={this.state.isZoomEnabled}
           onRegionChange={this._onRegionChange}
         />
-      </View>
+      </SafeAreaView>
     );
   }
 }

@@ -59,6 +59,8 @@ PODS:
     - React/Core
     - React/fishhook
     - React/RCTBlob
+  - RNGestureHandler (1.0.12):
+    - React
   - RNSVG (8.0.10):
     - React
   - SDWebImage/Core (4.4.3)
@@ -86,6 +88,7 @@ DEPENDENCIES:
   - React/RCTText (from `../node_modules/react-native`)
   - React/RCTVibration (from `../node_modules/react-native`)
   - React/RCTWebSocket (from `../node_modules/react-native`)
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga/Yoga.podspec`)
 
@@ -106,6 +109,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native"
   react-native-fast-image:
     :path: "../node_modules/react-native-fast-image"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
   RNSVG:
     :path: "../node_modules/react-native-svg"
   yoga:
@@ -119,10 +124,11 @@ SPEC CHECKSUMS:
   glog: e8acf0ebbf99759d3ff18c86c292a5898282dcde
   React: 1fe0eb13d90b625d94c3b117c274dcfd2e760e11
   react-native-fast-image: cba3d9bf9c2cf8ddb643d887a686c53a5dd90a2c
+  RNGestureHandler: 282af6ea58ed8483612365159c58a3ca5f55e7da
   RNSVG: 6252323c0312735f0af5f58b5adf2965b6a9ffbf
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   yoga: b1ce48b6cf950b98deae82838f5173ea7cf89e85
 
-PODFILE CHECKSUM: d752b54924b1cdc37ab7aaaf5a57cf0ee101c550
+PODFILE CHECKSUM: d8dbe5ee3d58fab84be063a1c61ebbc9ac492127
 
 COCOAPODS: 1.5.3
